@@ -1,9 +1,159 @@
 extends ./source/extend/maintemp.jade
-include ./source/mixin/components/list.jade
 
 block header
-	h1 header
+	.inner
+		a(href="#").logo
+			img(src="../images/bg/logo2.png" alt="").logo_text
+			img(src="../images/bg/logo_m.png" alt="").logo_m
+			img(src="../images/bg/logo_l.png" alt="").logo_l
+		.header_slider
+			.header_slider__inner
+				img(src="../images/img/top_img.png" alt="").header_slider__image
+		ul.menu
+			- var menu = {item1: {title:"Design", img:"1"}, item2: {title:"Project", img:"2"}, item3: {title:"Encoding", img:"3"}, item4: {title:"Studio 8", img:"4"}};
+			each item in menu
+				li.menu__item(class="menu__item#{item.img}")
+					a(href="#").menu__item__link
+						.menu__item__link__box
+							img(src="../images/img/menu/img#{item.img}.png" alt="").menu__item__link__box__img
+						span.menu__item__link__span #{item.title}
+		a(href="#").sitemap
+	.top-line
+	.header_wave
 block content
-	p content
+	.inner
+		.main-menu
+			- var main_menu = {item1:"Home", item2:"About", item3:"Portfolio", item4:"Download", item5:"Freebies", item6:"Contact" };
+			each item in main_menu
+				.main-menu__item
+					a(href="#").main-menu__item__link
+						span.main-menu__item__link__span #{item}
+			form(action="").search-form
+				input(type="text").search-form__input
+				button.search-form__box__button
+					.search-form__box__button__inner
+		.box-slider
+			.box-slider__inner
+				a(href="#").box-slider__nav.box-slider__nav_left 
+					&#8249;
+					.box-slider__nav__inner 
+						&#8249;
+				a(href="#").box-slider__nav.box-slider__nav_right
+					&#8250;
+					.box-slider__nav__inner
+						&#8250;
+				ul.box-slider__list
+					- for (i=0; i<5; i++) {
+						li.box-slider__list__item(class="box-slider__list__item#{i}")
+							img(src="../images/img/img1.jpg" alt="").box-slider__list__item__img
+					- }
+		ul.list-obj
+			li.list-obj__item
+				img(src="../images/img/services/img1.png" alt="").list-obj__item__img_abs
+				h2.list-obj__item__title
+					span.list-obj__item__title__check
+						.list-obj__item__title__check__img
+					|Quality Fonts choice
+				p.list-obj__item__text Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum eget sem sed risus elementum tempor. Sed non dolor. Phasellus pharetra suscipit arcu. 
+				h3.list-obj__item__title2 Logo Design
+				img(src="../images/img/services/img4.png" alt="").list-obj__item__img
+			li.list-obj__item
+				img(src="../images/img/services/img2.png" alt="").list-obj__item__img_abs
+				h2.list-obj__item__title
+					span.list-obj__item__title__check
+						.list-obj__item__title__check__img
+					|Content analysis and insertion
+				p.list-obj__item__text Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum eget sem sed risus elementum tempor. Sed non dolor. Phasellus pharetra suscipit arcu. 
+				h3.list-obj__item__title2 Print Design
+				img(src="../images/img/services/img5.png" alt="").list-obj__item__img
+			li.list-obj__item
+				img(src="../images/img/services/img3.png" alt="").list-obj__item__img_abs
+				h2.list-obj__item__title
+					span.list-obj__item__title__check
+						.list-obj__item__title__check__img
+					|Browser Compatibility
+				p.list-obj__item__text Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum eget sem sed risus elementum tempor. Sed non dolor. Phasellus pharetra suscipit arcu. 
+				h3.list-obj__item__title2 Web Design
+				img(src="../images/img/services/img6.png" alt="").list-obj__item__img
+
 
 block footer
+	.inner
+		ul.list-obj
+			li.list-obj__item.list-obj__item_footer
+				ul.list-first
+					li.list-first__item
+						.list-obj__item_footer__box-img
+							img(src="../images/icons/img1.png" alt="").list-obj__item_footer__img
+						.list-obj__item_footer__text Were used for the design icons free
+					li.list-first__item
+						.list-obj__item_footer__box-img
+							img(src="../images/icons/img2.png" alt="").list-obj__item_footer__img
+						.list-obj__item_footer__text If you need information Contact
+					li.list-first__item
+						.list-obj__item_footer__box-img
+							img(src="../images/icons/img3.png" alt="").list-obj__item_footer__img
+						.list-obj__item_footer__text Graphics was conceived and designed by me Michelangelo Cremona
+			li.list-obj__item.list-obj__item_footer
+				ul.list-first.list-first_mod1
+					li.list-first__item
+						.list-obj__item_footer__box-img
+							img(src="../images/icons/img4.png" alt="").list-obj__item_footer__img
+						.list-obj__item_footer__text.list-obj__item_footer__text_mod1 Phone: +39-3473749160
+					li.list-first__item
+						.list-obj__item_footer__box-img
+							img(src="../images/icons/img5.png" alt="").list-obj__item_footer__img
+						.list-obj__item_footer__text.list-obj__item_footer__text_mod1 Email: postmaster@imediacreatives.it
+					li.list-first__item
+						.list-obj__item_footer__box-img
+							img(src="../images/icons/img6.png" alt="").list-obj__item_footer__img
+						.list-obj__item_footer__text.list-obj__item_footer__text_mod1 Address Via Piria 19
+					li.list-first__item
+						.list-obj__item_footer__box-img
+							&nbsp;
+						.list-obj__item_footer__text.list-obj__item_footer__text_mod1 C.A.P 89016 (RC) Drosi di Rizziconi Italy
+					li.list-first__item
+						.list-obj__item_footer__box-img
+							img(src="../images/icons/img7.png" alt="").list-obj__item_footer__img
+						.list-obj__item_footer__text.list-obj__item_footer__text_mod1 IM_creatives
+			li.list-obj__item.list-obj__item_footer
+				.part-left
+					.last-tweet
+						img(src="../images/icons/img9.png" alt="").last-tweet__img
+						.last-tweet__text @IM_creatives
+						.last-tweet__info
+							|Latest Tweet
+							br
+							|New Inspiration for 
+							br
+							|Design 
+							br
+							|http://www.imediacreatives.it/iphone/ 
+							br
+							|Wiew Design
+					.cut PSD to HTML IMEDIACREATIVE.IT
+				.part-right
+					ul.social
+						li.social__item
+							a(href="#").social__item__link
+								img(src="../images/icons/social/img1.png" alt="").social__item__link__img
+						li.social__item
+							a(href="#").social__item__link
+								img(src="../images/icons/social/img2.png" alt="").social__item__link__img
+						li.social__item
+							a(href="#").social__item__link
+								img(src="../images/icons/social/img3.png" alt="").social__item__link__img
+						li.social__item
+							a(href="#").social__item__link
+								img(src="../images/icons/social/img4.png" alt="").social__item__link__img
+	.footer__bottom
+		.inner
+			ul.menu_list
+				- var main_menu = {item1:"Home", item2:"About", item3:"Portfolio", item4:"Download", item5:"Freebies", item6:"Inspiration", item7:"Contact" };
+				each item in main_menu
+					li.menu_list__item
+						a(href="#").menu_list__item__link #{item}
+			.copyright
+				|Copyright
+				span.copyright__inner 2010
+				|Imediacreatives.it

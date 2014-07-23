@@ -1,0 +1,188 @@
+.content {
+	position: relative;
+	z-index: 100;
+	border-bottom: 2px solid #33333b;
+	margin-bottom: 2px;
+	padding-bottom: 15px;
+}
+.list-obj__item__title__check {
+	display: inline-block;
+	border-radius: 50%;
+	position: absolute;
+	top: 0; left: -35px;
+	border: 2px solid #a9b5a9;
+	background: rgb(0,171,0); /* Old browsers */
+	.d-gradient(rgba(0,171,0,1), rgba(0,124,0,1), 135deg);
+	.square(24px);
+}
+.list-obj__item__title {
+	color: @title-list;
+	font-family: "Georgia";
+	font-size: 18px;
+	margin: 0 22px 10px 12px;
+	padding: 3px 0 4px 0;
+	border-bottom: 1px solid #dadada;
+	font-weight: normal;
+	position: relative;
+	height: 42px;
+	display: block;
+}
+.list-obj__item__title__check__img {
+	position: relative;
+	border: 0 solid transparent;
+	border-top: 12px solid #fff;
+	top: 6px;
+	left: 12px;
+	width: 2px;
+	height: 3px;
+	.transform(rotate(35deg));
+	&:after {
+		content: '';
+		position: absolute;
+		border: 0 solid transparent;
+		border-top: 6px solid #fff;
+		top: -6px;
+		left: -2px;
+		width: 2px;
+		height: 3px;
+		.transform(rotate(-76deg));
+	}
+}
+.list-obj {
+	list-style: none;
+	margin: 0 -24px 0 0;
+	padding: 0;
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+.list-obj__item {
+	width: 33%;
+	float: left;
+	padding: 0 0 0 92px;
+	position: relative;
+	border-left: 1px solid #d2d2d2;
+	.box-sizing();
+	&:first-child {
+		border: none;
+	}
+	&.list-obj__item_footer {
+		padding: 0;
+		margin-top: 8px;
+	}
+	&:hover {
+		.list-obj__item__title__check {
+			.d-gradient(#e75a5a, #e70000, 135deg);
+			.transition();
+		}
+	}
+}
+.list-obj__item_footer__img {
+	display: inline-block;
+}
+.list-obj__item_footer__box-img {
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	width: 46px;
+}
+.list-obj__item__img_abs {
+	position: absolute;
+	top: 16px; left: 2px;
+}
+.list-obj__item__text {
+	color: @text-list;
+	font-family: "Myriad Pro";
+	font-size: 12px;
+	line-height: 14px;
+	margin: 0 22px 12px 0;
+}
+.list-obj__item__title2 {
+	color: @text-list;
+	font-family: "Myriad Pro";
+	font-size: 18px;
+	margin: 0 0 0 -8px;
+	font-weight: normal;
+}
+.list-first {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.list-first__item {
+	margin-bottom: 6px;
+}
+.list-obj__item_footer__text {
+	color: @main-menu-color;
+	font-family: "Georgia";
+	font-size: 14px;
+	width: 250px;
+	padding-bottom: 8px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.list-first_mod1 {
+	margin-top: 24px;
+}
+.list-obj__item_footer__text_mod1 {
+	width: 260px;
+}
+.part-left {
+	float: left;
+}
+.part-right {
+	float: right;
+	padding: 8px 36px 0 0;
+}
+.social {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.social__item {
+	padding-bottom: 14px;
+}
+.last-tweet {
+	margin:8px 0 12px 24px;
+	width: 187px;
+	height: 132px;
+	padding: 6px 12px;
+	border: 1px solid rgba(203,203,203, 0.11);
+	background-color: rgba(153,153,153, 0.11);
+	box-shadow: inset 0 0 0 rgba(0,0,0,.10), inset 0 0 5px rgba(255,255,255,.25);
+	.box-sizing();
+}
+.last-tweet__img {
+	display: inline-block;
+	vertical-align: middle;
+}
+.last-tweet__text {
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff;
+	font-family: "Georgia";
+	font-size: 14px;
+	padding-left: 12px;
+}
+.last-tweet__info {
+	color: @tweet;
+	font-family: "Constantia";
+	font-size: 10px;
+	padding-top: 8px;
+	line-height: 12px;
+	letter-spacing: -0.5px;
+}
+.cut {
+	color: @cut-text;
+	font-family: "Constantia";
+	font-size: 10px;
+	text-shadow: 0 -5px 5px rgba(0,0,0,.75);
+	text-shadow: 0 0 0 @main-menu-color;
+	line-height: 50px;
+	background: url('@{icons_path}/img8.png') 0 0 no-repeat;
+	height: 39px;
+	padding-left: 46px;
+	margin-left: 8px;
+}

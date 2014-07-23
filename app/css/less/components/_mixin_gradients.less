@@ -42,8 +42,8 @@
 	background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
 	background-image: -moz-radial-gradient(circle, @innerColor, @outerColor);
 	background-image: -o-radial-gradient(circle, @innerColor, @outerColor);
-
 	background-color: mix(@innerColor, @outerColor, 60%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@innerColor', endColorstr='@outerColor',GradientType=1 );
 	background-repeat: no-repeat;
 }
 

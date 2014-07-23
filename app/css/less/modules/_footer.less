@@ -1,0 +1,40 @@
+.footer {
+	background-color: #353535;
+}
+.footer__bottom {
+	background-color: @text-list;
+	height: 21px;
+}
+.copyright {
+	float: right;
+	color: @main-menu-color;
+	font-family: "Georgia";
+	font-size: 14px;
+	padding-right: 24px;
+}
+.copyright__inner {
+	padding: 0 10px;
+}
+.menu_list {
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.menu_list__item {
+	float: left;
+	margin-right: 36px;
+	position: relative;
+	&:after {
+		content: '|';
+		position: absolute;
+		right: -18px; top: 2px;
+		color: @main-menu-color;
+		display: block;
+	}
+}
+.menu_list__item__link {
+	color: @main-menu-color;
+	font-family: "Georgia";
+	font-size: 14px;
+}

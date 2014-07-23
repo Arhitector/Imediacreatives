@@ -1,0 +1,215 @@
+.animation (@val) {
+	-webkit-animation: @val;
+	-moz-animation: @val;
+	-o-animation: @val;
+	animation: @val;
+}
+@keyframes transform {
+	.transform_mixin ();
+}
+@-o-keyframes transform {
+	.transform_mixin ();
+}
+@-moz-keyframes transform {
+	.transform_mixin ();
+}
+@-webkit-keyframes transform {
+	.transform_mixin ();
+}
+.transform_mixin () {
+	from {
+		background-position: 0 100%;
+	}
+	to {
+		background-position: 110% 100%;
+	}
+}
+@keyframes gallop {
+	.gallop ();
+}
+@-o-keyframes gallop {
+	.gallop ();
+}
+@-moz-keyframes gallop {
+	.gallop ();
+}
+@-webkit-keyframes gallop {
+	.gallop ();
+}
+.gallop () {
+	0% {
+		top: 0;
+	}
+	20% {
+		top: 10px;
+	}
+	40% {
+		top: -10px;
+	}
+	60% {
+		top: 4px;
+	}
+	80% {
+		top: -4px;
+	}
+	100% {
+		top: 0px;
+	}
+}
+@keyframes left_right {
+	.left_right ();
+}
+@-o-keyframes left_right {
+	.left_right ();
+}
+@-moz-keyframes left_right {
+	.left_right ();
+}
+@-webkit-keyframes left_right {
+	.left_right ();
+}
+.left_right () {
+	0% {
+		right: 0;
+	}
+	20% {
+		right: 10px;
+	}
+	40% {
+		right: -10px;
+	}
+	60% {
+		right: 4px;
+	}
+	80% {
+		right: -4px;
+	}
+	100% {
+		right: 0px;
+	}
+}
+@keyframes jump {
+	.jump ();
+}
+@-o-keyframes jump {
+	.jump ();
+}
+@-moz-keyframes jump {
+	.jump ();
+}
+@-webkit-keyframes jump {
+	.jump ();
+}
+
+@keyframes jump {
+	.jump ();
+}
+.jump () {
+	0% {
+		top: 0;
+	}
+	12% {
+		top: -3px;
+	}
+	18% {
+		top: -9px;
+	}
+	20% {
+		top: -18px;
+	}
+	35% {
+		top: -26px;
+	}
+	45% {
+		top: -30px;
+	}
+	55% {
+		top: -34px;
+	}
+	65% {
+		top: -36px;
+	}
+	75% {
+		top: -34px;
+	}
+	85% {
+		top: -10px;
+	}
+	90% {
+		top: 0;
+	}
+	95% {
+		top: -6px;
+	}
+	97% {
+		top: 0;
+	}
+	99% {
+		top: -2px;
+	}
+	100% {
+		top: 0;
+	}
+}
+@keyframes jump_shadow {
+	.jump_shadow ();
+}
+@-o-keyframes jump_shadow {
+	.jump_shadow ();
+}
+@-moz-keyframes jump_shadow {
+	.jump_shadow ();
+}
+@-webkit-keyframes jump_shadow {
+	.jump_shadow ();
+}
+@keyframes jump_shadow {
+	.jump_shadow ();
+}
+.jump_shadow () {
+	0% {
+		background-size: 98px 29px;
+	}
+	12% {
+		background-size: 96px 27px;
+	}
+	18% {
+		background-size: 88px 25px;
+	}
+	20% {
+		background-size: 78px 19px;
+	}
+	35% {
+		background-size: 68px 16px;
+	}
+	45% {
+		background-size: 49px 14px;
+	}
+	55% {
+		background-size: 45px 12px;
+	}
+	65% {
+		background-size: 40px 10px;
+	}
+	75% {
+		background-size: 45px 12px;
+	}
+	85% {
+		background-size: 83px 21px;
+	}
+	90% {
+		background-size: 90px 24px;
+	}
+	95% {
+		background-size: 83px 21px;
+	}
+	97% {
+		background-size: 90px 24px;
+	}
+	99% {
+		background-size: 96px 27px;
+	}
+	100% {
+		background-size: 90px 24px;
+	}
+}
