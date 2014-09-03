@@ -24,7 +24,7 @@
 	border-bottom: 1px solid #dadada;
 	font-weight: normal;
 	position: relative;
-	height: 42px;
+	min-height: 42px;
 	display: block;
 }
 .list-obj__item__title__check__img {
@@ -52,6 +52,8 @@
 	list-style: none;
 	margin: 0 -24px 0 0;
 	padding: 0;
+	overflow: hidden;
+	width: 100%;
 	&:after {
 		content: "";
 		display: block;
@@ -86,7 +88,7 @@
 	text-align: center;
 	display: inline-block;
 	vertical-align: middle;
-	width: 46px;
+	width: 20%;
 }
 .list-obj__item__img_abs {
 	position: absolute;
@@ -118,7 +120,7 @@
 	color: @main-menu-color;
 	font-family: "Georgia";
 	font-size: 14px;
-	width: 250px;
+	width: 78%;
 	padding-bottom: 8px;
 	display: inline-block;
 	vertical-align: middle;
@@ -127,7 +129,7 @@
 	margin-top: 24px;
 }
 .list-obj__item_footer__text_mod1 {
-	width: 260px;
+	width: 78%;
 }
 .part-left {
 	float: left;
@@ -185,4 +187,10 @@
 	height: 39px;
 	padding-left: 46px;
 	margin-left: 8px;
+}
+@media (max-width: @smallMaxWidth) {
+	.list-obj__item {
+		width: 100%;
+		border: none;
+	}
 }

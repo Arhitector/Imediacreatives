@@ -1,5 +1,4 @@
 .main-menu {
-	width: 886px;
 	margin: -27px auto 20px;
 	border: 3px solid #d3d3d3;
 	border-radius: 26px;
@@ -11,15 +10,21 @@
 	background: -ms-linear-gradient(top,  #818382 0%,#9d9d9d 2%,#a1a1a1 3%,#979797 24%,#8e8e8e 34%,#737373 56%,#525252 75%,#4c4c4c 76%,#393939 88%,#1e1e1e 98%,#959595 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #818382 0%,#9d9d9d 2%,#a1a1a1 3%,#979797 24%,#8e8e8e 34%,#737373 56%,#525252 75%,#4c4c4c 76%,#393939 88%,#1e1e1e 98%,#959595 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#818382', endColorstr='#959595',GradientType=0 ); /* IE6-9 */
-	.size(886px, 60px);
+	width: 886/@main_width*100%;
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	
 }
 .main-menu__item__link {
 	color: @main-menu-color;
 	font-family: "Georgia";
-	font-size: 14px;
+	font-size: 14em/@base-font-size;
 	text-shadow: 0 -1px 1px rgba(0,0,0,.75);
 	text-shadow: 0 0 5px rgba(0,0,0,.75);
-	line-height: 52px;
+	line-height: 4em;
 
 	&:hover {
 		text-decoration: none;
@@ -34,6 +39,7 @@
 	float: left;
 	margin-left: 22px;
 	position: relative;
+	padding-bottom: 1%;
 	&:first-child {
 		margin-left: 80px;
 		&:before {
@@ -63,8 +69,9 @@
 }
 .search-form {
 	float: right;
-	margin: 15px 33px 0 0;
+	margin: 15px 33px 15px 0;
 	position: relative;
+	width: 174px;
 }
 .search-form__input {
 	margin: 0;
@@ -111,5 +118,10 @@
 		width: 10px;
 		height: 2px;
 		.transform(rotate(32deg));
+	}
+}
+@media (max-width: @smallMaxWidth) {
+	.main-menu__item__link {
+		line-height: 1.5em;
 	}
 }
